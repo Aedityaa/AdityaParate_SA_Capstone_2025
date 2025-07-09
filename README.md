@@ -20,12 +20,11 @@ Version Control: Git & GitHub
 
 Architecture Diagram
 
-graph TB
+    graph TB
     A[Raw Parking Data] --> B[Pathway Data Ingestion]
     B --> C[Real-time Data Stream]
     C --> D[Feature Engineering]
     D --> E[Dynamic Pricing Models]
-    
     E --> F[Model 1: Baseline Linear]
     E --> G[Model 2: Demand-Based Function]
     E --> H[Model 3: Competitive Pricing]
