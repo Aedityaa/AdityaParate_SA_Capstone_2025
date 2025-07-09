@@ -108,30 +108,45 @@ Visualization: Bokeh dashboard displays live pricing trends
 Real-time Bokeh visualizations include:
 
 Price Trend Lines: Live pricing for all 14 parking spaces
+
 Occupancy Patterns: Historical and current occupancy rates
+
 Demand Indicators: Queue length, traffic levels, special events
+
 Competitor Comparison: Price comparison with nearby lots (Model 3)
 
 ## Key Features
 
 Real-time Processing: Pathway enables continuous data streaming and processing
+
 Scalable Architecture: Modular design supports multiple pricing models
+
 Smooth Price Transitions: Bounded price variations prevent erratic changes
+
 Business Intelligence: Competitive analysis and rerouting suggestions
+
 Interactive Visualization: Live dashboard for monitoring and analysis
 
 ## Model Assumptions
 
 Base Price: $10 represents the minimum viable price point
+
 Demand Fluctuation: Higher daily occupancy variance indicates higher demand volatility
+
 Capacity Normalization: Fluctuation is normalized by capacity to ensure fair comparison across different lot sizes
+
 Time Windows: Daily aggregation captures meaningful demand patterns
+
 Price Bounds: Prices are implicitly bounded to prevent extreme values
 
 ## Future Enhancements
 
 Machine Learning Integration: Implement ML models for demand prediction
+
 Weather Integration: Include weather data for better demand forecasting
+
 Dynamic Base Pricing: Adjust base price based on seasonal/weekly patterns
+
 Multi-objective Optimization: Balance revenue optimization with utilization efficiency
+
 Advanced Routing: Implement sophisticated vehicle rerouting algorithms
