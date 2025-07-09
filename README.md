@@ -1,0 +1,1 @@
+# AdityaParate_SA_Capstone_2025
