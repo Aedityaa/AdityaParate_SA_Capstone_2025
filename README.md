@@ -32,7 +32,8 @@ Environmental Conditions: Traffic congestion, Special day indicators
 2. Real-time Data Streaming with Pathway
 The project uses Pathway for real-time data processing:
 
-# Time-based windowing for daily aggregation
+Time-based windowing for daily aggregation
+
 delta_window = data_with_time.windowby(
     pw.this.t,  # Event time column
     instance=pw.this.day,  # Daily partitioning
