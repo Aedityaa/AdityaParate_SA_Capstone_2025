@@ -18,6 +18,49 @@ Visualization: bokeh - Interactive real-time visualizations
 Environment: Google Colab
 Version Control: Git & GitHub
 
+Architecture Diagram
+
+graph TB
+    A[Raw Parking Data] --> B[Pathway Data Ingestion]
+    B --> C[Real-time Data Stream]
+    C --> D[Feature Engineering]
+    D --> E[Dynamic Pricing Models]
+    
+    E --> F[Model 1: Baseline Linear]
+    E --> G[Model 2: Demand-Based Function]
+    E --> H[Model 3: Competitive Pricing]
+    
+    F --> I[Price Calculation Engine]
+    G --> I
+    H --> I
+    
+    I --> J[Real-time Price Updates]
+    J --> K[Bokeh Visualization Dashboard]
+    
+    L[Historical Data] --> M[Windowed Aggregation]
+    M --> N[Daily Fluctuation Analysis]
+    N --> I
+    
+    subgraph "Data Processing Pipeline"
+        B
+        C
+        D
+        M
+        N
+    end
+    
+    subgraph "Pricing Models"
+        F
+        G
+        H
+        I
+    end
+    
+    subgraph "Output & Visualization"
+        J
+        K
+    end
+
 ## Project Architecture and Workflow
 
 1. Data Ingestion & Preprocessing
@@ -48,7 +91,9 @@ Price(t+1) = Price(t) + α × (Occupancy/Capacity)
 
 Model 2: Demand-Based Price Function
 Advanced model incorporating multiple demand factors:
+
 Demand = α×(Occupancy/Capacity) + β×QueueLength - γ×Traffic + δ×IsSpecialDay + ε×VehicleTypeWeight
+
 Price(t) = BasePrice × (1 + λ × NormalizedDemand)
 
 4. Real-time Processing Pipeline
